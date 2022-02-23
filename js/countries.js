@@ -30,5 +30,13 @@ const displayCountries = countries => {
     })
 }
 const loadCountryByName = name => {
-    console.log(name);
+    const url = `https://restcountries.eu/v2/name/${name}`;
+   console.log(url)
+    fetch(url)
+    .then(res => res.json())
+    .then(data => console.log(data[0]))
 }
+
+displayCountryDetail = country => {
+    const countryDiv = document.getElementById('country-detail')
+}   
